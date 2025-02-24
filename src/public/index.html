@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>泛亚中文读经组</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>泛亚中文读经组</h1>
+            <div id="readingPlan" class="reading-plan">正在加载读经进度...</div>
+        </header>
+
+        <button id="addUserBtn" class="add-user-btn">+</button>
+
+        <!-- 用户卡片区域 -->
+        <div id="userCards" class="user-cards"></div>
+
+        <!-- 统计信息区域 -->
+        <div class="statistics-section">
+            <div class="stats-header">
+                <button id="sendStatsBtn" class="send-stats-btn">发送统计</button>
+            </div>
+            <div id="liveStatistics" class="live-statistics"></div>
+        </div>
+
+        <!-- 提示信息 -->
+        <div class="tips">
+            提示: 双击切换已读/未读, 长按冻结/解冻/删除
+        </div>
+    </div>
+
+    <!-- 添加用户模态框 -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <h2>添加用户</h2>
+            <form id="addUserForm">
+                <textarea id="userNames" placeholder="输入用户名，多个用户用逗号或换行分隔"></textarea>
+                <div class="modal-buttons">
+                    <button type="button" id="cancelAdd" class="btn">取消</button>
+                    <button type="submit" class="btn primary">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 未读天数模态框 -->
+    <div id="unreadDaysModal" class="modal">
+        <div class="modal-content">
+            <h2>设置未读天数</h2>
+            <div class="input-group">
+                <input type="number" id="unreadDays" min="1" max="7" value="1">
+                <span class="input-suffix">天</span>
+            </div>
+            <div class="modal-buttons">
+                <button type="button" id="cancelUnread" class="btn">取消</button>
+                <button type="button" id="confirmUnread" class="btn primary">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载状态 -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">同步中...</div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

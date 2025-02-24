@@ -1,0 +1,29 @@
+{
+  "name": "bible-reading-group",
+  "version": "1.0.0",
+  "description": "Bible Reading Group Management System",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "lint": "eslint src/",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.0",
+    "node-schedule": "^2.1.1",
+    "qrcode-terminal": "^0.12.0",
+    "sqlite3": "^5.1.6",
+    "whatsapp-web.js": "^1.19.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

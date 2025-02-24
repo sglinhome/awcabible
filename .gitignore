@@ -1,0 +1,28 @@
+# Dependencies
+/node_modules
+node_modules/
+
+# Database
+*.sqlite
+*.sqlite-journal
+
+# WhatsApp session
+.wwebjs_auth/
+.wwebjs_cache/
+src/.wwebjs_auth/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
